@@ -2,3 +2,91 @@
 a.active {
     font-weight: bold;
 }
+
+
+:root{
+    --paddingamt: 18px;
+    --padding2: 38px;
+    --txtcolor: #ffffff;
+    --fontmain: 24px;
+    --fonthero: 56px;
+}
+
+
+body{
+    margin: 0 auto;
+    background: #1C2D5B;
+    color: var(--txtcolor);
+    font-family: "Copperplate Gothic";
+    font-weight: bold;
+    font-size: var(--fontmain);
+}
+
+
+header{
+    background: #B8BFC7;
+    color: #000000;
+}
+
+
+h1{
+    margin: 0;
+    padding: var(--padding2);  /*38px*/
+    font-size: var(--fonthero);
+    letter-spacing: 3px;
+}
+
+
+h2{
+    font-size: var(--fonthero);
+    padding: var(--paddingamt);
+    text-align: center;
+    margin: 2.5% 20%;
+    letter-spacing: 2px;
+}
+
+
+#about{
+    display: grid;
+    grid-template-columns: 1.25fr .75fr 1fr;
+    gap: 20px;
+    margin: 0 5% 2.5% 10%; 
+    padding: 1em;
+}
+
+
+#about img{
+    width: 90%;
+}
+
+
+.grid{
+    margin:0;
+    font-weight: normal;
+}
+
+
+.grid:nth-child(2)
+{
+    grid-row: 1 / 3;
+    grid-column: 2 / 4;
+    margin-left: 10%;
+}
+/*text (h2&p) section layout*/
+
+
+h3{
+    font-size: 2em;
+    font-weight: normal;
+    margin-block-start: 0;
+    margin-block-end: .5em;
+}
+
+
+p{
+    font-weight: lighter;
+    font-size: 22px;
+    word-spacing: 5px;
+    letter-spacing: 1px;
+    line-height: 28px;
+}
