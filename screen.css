@@ -15,6 +15,7 @@ a.active {
 
 body{
     margin: 0 auto;
+    margin-block: 0;
     background: #1C2D5B;
     color: var(--txtcolor);
     font-family: "Copperplate Gothic";
@@ -32,25 +33,27 @@ header{
 h1{
     margin: 0;
     padding: var(--padding2);  /*38px*/
-    font-size: var(--fonthero);
+    font-size: var(--fonthero); /*56px*/
     letter-spacing: 3px;
 }
 
 
 h2{
-    font-size: var(--fonthero);
-    padding: var(--paddingamt);
+    font-size: var(--fonthero); /*56px*/
+    padding: var(--paddingamt); /*18px*/
     text-align: center;
-    margin: 2.5% 20%;
+    margin: 2.5% 20%; /*top&bottom 2.5|right&left 20*/
     letter-spacing: 2px;
 }
 
 
 #about{
     display: grid;
-    grid-template-columns: 1.25fr .75fr 1fr;
-    gap: 20px;
-    margin: 0 5% 2.5% 10%; 
+    grid-template-columns: .25fr .25fr .75fr; /*col 1: .25 unit|col 2: .25 unit|col3: .75 unit*/
+    grid-template-rows: .2fr 1fr; /*row 1: .25 unit|row 2: 1 unit*/
+    column-gap: 50px;
+    row-gap: 0;
+    margin: 0 5% 2.5% 10%; /*margins go clockwise => top: 0|right: 5|bottom: 2.5|left: 10*/
     padding: 1em;
 }
 
@@ -63,23 +66,32 @@ h2{
 .grid{
     margin:0;
     font-weight: normal;
+    margin-block: 0;  /*not sure why I have to set margin block again*/
+    display: inline-flex; /*elements take up only what they need to
+    and sit on same line as other elements*/
 }
 
 
-.grid:nth-child(2)
+.grid:nth-child(1)
 {
     grid-row: 1 / 3;
-    grid-column: 2 / 4;
-    margin-left: 10%;
-}
-/*text (h2&p) section layout*/
+    grid-column: 1 / 3;
+} /*photo starts in column & row 1 and ends column & row 3*/
 
+
+.flexbox{
+    display: flex;
+    align-items: flex-start; /*content goes to the start of their 
+    container (text to the top of their cell in this case)*/
+    justify-content: center; /*content is centered w/in flexbox*/
+    margin-block:0; /*setting margin block works here*/
+}/*create flex box for h2&p*/
 
 h3{
-    font-size: 2em;
+    font-size: 2em; 
     font-weight: normal;
-    margin-block-start: 0;
-    margin-block-end: .5em;
+    margin-block: 0;
+    line-height: 40px;
 }
 
 
